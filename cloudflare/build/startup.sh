@@ -77,6 +77,6 @@ stopCloudflare() {
 > /cloudflare_url.txt
 getCloudflarePublicURL "${TARGET_URL}" > "./cloudflare_url.txt"
 
-while true; do
-    sleep 60  # Sleep for 60 seconds
-done
+# while true; do
+#     sleep 60  # Sleep for 60 seconds
+# done

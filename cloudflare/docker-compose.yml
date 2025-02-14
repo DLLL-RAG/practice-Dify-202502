@@ -1,12 +1,10 @@
 version: '3.5'
 services:
   cloudflare:
-    # image: ubuntu:jammy
-    build: .
-    volumes:
-      - ./cloudflare.url.txt:/cloudflare_url.txt
-    entrypoint: []
-    command: ["bash", "/startup.sh"]
-    environment: 
-      # - TARGET_URL=http://nginx/
-      - TARGET_URL=https://blog.pulipuli.info
+    image: pudding/docker-app:docker-cloudflare-tunnel-app-20250215.024625
+    # volumes:
+    #   - ./cloudflare.url.txt:/cloudflare_url.txt
+    # entrypoint: []
+    # command: ["bash", "/startup.sh"]
+    entrypoint: ["/cloudflared", "--url", "http://dify2openai:3000"]
+    
