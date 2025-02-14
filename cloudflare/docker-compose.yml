@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  cloudflare:
+    # image: ubuntu:jammy
+    build: .
+    volumes:
+      - ./cloudflare.url.txt:/cloudflare_url.txt
+    entrypoint: []
+    command: ["bash", "/startup.sh"]
+    environment: 
+      # - TARGET_URL=http://nginx/
+      - TARGET_URL=https://blog.pulipuli.info
