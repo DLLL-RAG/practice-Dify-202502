@@ -133,7 +133,7 @@ const translation = {
         language: 'Sprache',
         authorPublisher: 'Autor/Verlag',
         publishDate: 'Veröffentlichungsdatum',
-        topicKeywords: 'Themen/Schlüsselwörter',
+        topicsKeywords: 'Themen/Schlüsselwörter',
         description: 'Beschreibung',
       },
       paper: {
@@ -144,7 +144,7 @@ const translation = {
         journalConferenceName: 'Zeitschrift/Konferenzname',
         volumeIssuePage: 'Band/Ausgabe/Seite',
         DOI: 'DOI',
-        topicKeywords: 'Themen/Schlüsselwörter',
+        topicsKeywords: 'Themen/Schlüsselwörter',
         abstract: 'Zusammenfassung',
       },
       socialMediaPost: {

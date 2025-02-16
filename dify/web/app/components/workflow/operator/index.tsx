@@ -13,8 +13,6 @@ const Operator = ({ handleUndo, handleRedo }: OperatorProps) => {
   return (
     <>
       <MiniMap
-        pannable
-        zoomable
         style={{
           width: 102,
           height: 72,

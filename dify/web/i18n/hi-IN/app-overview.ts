@@ -123,7 +123,6 @@ const translation = {
           operation: 'प्रलेखन',
         },
       },
-      launch: 'लॉन्च',
     },
     apiInfo: {
       title: 'बैकएंड सेवा एपीआई',

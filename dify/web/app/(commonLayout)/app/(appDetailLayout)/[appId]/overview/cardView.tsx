@@ -24,11 +24,9 @@ import AppContext from '@/context/app-context'
 
 export type ICardViewProps = {
   appId: string
-  isInPanel?: boolean
-  className?: string
 }
 
-const CardView: FC<ICardViewProps> = ({ appId, isInPanel, className }) => {
+const CardView: FC<ICardViewProps> = ({ appId }) => {
   const { t } = useTranslation()
   const { notify } = useContext(ToastContext)
   const appDetail = useAppStore(state => state.appDetail)
@@ -122,11 +120,10 @@ const CardView: FC<ICardViewProps> = ({ appId, isInPanel, className }) => {
     return <Loading />
 
   return (
-    <div className={className || 'grid gap-6 grid-cols-1 xl:grid-cols-2 w-full mb-6'}>
+    <div className="grid gap-6 grid-cols-1 xl:grid-cols-2 w-full mb-6">
       <AppCard
         appInfo={appDetail}
         cardType="webapp"
-        isInPanel={isInPanel}
         onChangeStatus={onChangeSiteStatus}
         onGenerateCode={onGenerateCode}
         onSaveSiteConfig={onSaveSiteConfig}
@@ -134,7 +131,6 @@ const CardView: FC<ICardViewProps> = ({ appId, isInPanel, className }) => {
       <AppCard
         cardType="api"
         appInfo={appDetail}
-        isInPanel={isInPanel}
         onChangeStatus={onChangeApiStatus}
       />
     </div>

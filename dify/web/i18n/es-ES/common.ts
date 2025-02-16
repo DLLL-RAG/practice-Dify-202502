@@ -50,7 +50,6 @@ const translation = {
     submit: 'Enviar',
     skip: 'Navío',
     imageCopied: 'Imagen copiada',
-    deleteApp: 'Eliminar aplicación',
   },
   errorMsg: {
     fieldRequired: '{{field}} es requerido',
@@ -291,7 +290,6 @@ const translation = {
       usedUp: 'Cuota de prueba agotada. Agrega tu propio proveedor de modelos.',
       useYourModel: 'Actualmente usando tu propio proveedor de modelos.',
       close: 'Cerrar',
-      trialQuotaTip: 'Su cuota de prueba antrópica caducará el 11/03/2025 y ya no estará disponible a partir de entonces. Por favor, aprovéchelo a tiempo.',
     },
     anthropic: {
       using: 'La capacidad de incrustación está usando',

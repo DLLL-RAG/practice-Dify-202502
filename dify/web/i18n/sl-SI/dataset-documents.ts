@@ -133,7 +133,7 @@ const translation = {
         language: 'Jezik',
         authorPublisher: 'Avtor/Založnik',
         publishDate: 'Datum objave',
-        topicKeywords: 'Teme/Ključne besede',
+        topicsKeywords: 'Teme/Ključne besede',
         description: 'Opis',
       },
       paper: {

@@ -112,7 +112,6 @@ const translation = {
           operation: 'Documentação',
         },
       },
-      launch: 'Lançar',
     },
     apiInfo: {
       title: 'API de Serviço de Back-end',

@@ -197,7 +197,8 @@ class TongyiLargeLanguageModel(LargeLanguageModel):
         else:
             # nothing different between chat model and completion model in tongyi
             params["messages"] = self._convert_prompt_messages_to_tongyi_messages(prompt_messages)
-            response = Generation.call(**params, result_format="message", stream=stream, incremental_output=True)
+            response = Generation.call(**params, result_format="message", stream=stream)
+
         if stream:
             return self._handle_generate_stream_response(model, credentials, response, prompt_messages)
 
@@ -257,9 +258,6 @@ class TongyiLargeLanguageModel(LargeLanguageModel):
         """
         full_text = ""
         tool_calls = []
-        is_reasoning_started = False
-        # for index, response in enumerate(responses):
-        index = 0
         for index, response in enumerate(responses):
             if response.status_code not in {200, HTTPStatus.OK}:
                 raise ServiceUnavailableError(
@@ -313,11 +311,7 @@ class TongyiLargeLanguageModel(LargeLanguageModel):
                     ),
                 )
             else:
-                message = response.output.choices[0].message
-
-                resp_content, is_reasoning_started = self._wrap_thinking_by_reasoning_content(
-                    message, is_reasoning_started
-                )
+                resp_content = response.output.choices[0].message.content
                 if not resp_content:
                     if "tool_calls" in response.output.choices[0].message:
                         tool_calls = response.output.choices[0].message["tool_calls"]

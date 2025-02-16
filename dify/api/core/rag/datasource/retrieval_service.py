@@ -1,4 +1,3 @@
-import json
 import threading
 from typing import Optional
 
@@ -172,7 +171,7 @@ class RetrievalService:
                 vector = Vector(dataset=dataset)
 
                 documents = vector.search_by_vector(
-                    query,
+                    cls.escape_query_for_search(query),
                     search_type="similarity_score_threshold",
                     top_k=top_k,
                     score_threshold=score_threshold,
@@ -251,7 +250,7 @@ class RetrievalService:
 
     @staticmethod
     def escape_query_for_search(query: str) -> str:
-        return json.dumps(query).strip('"')
+        return query.replace('"', '\\"')
 
     @staticmethod
     def format_retrieval_documents(documents: list[Document]) -> list[RetrievalSegments]:

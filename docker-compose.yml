@@ -1,1 +1,6 @@
 version: '3.5'
+include:
+  - path:
+    - dify/docker/docker-compose.yaml
+    - dify2openai/docker-compose.yml
+    - cloudflare/docker-compose.yml

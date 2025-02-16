@@ -112,7 +112,6 @@ const translation = {
           operation: 'Документация',
         },
       },
-      launch: 'Баркас',
     },
     apiInfo: {
       title: 'API серверной части',

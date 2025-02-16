@@ -112,7 +112,6 @@ const translation = {
           operation: 'Dokümantasyon',
         },
       },
-      launch: 'Başlat',
     },
     apiInfo: {
       title: 'Arka Uç Servis API\'si',

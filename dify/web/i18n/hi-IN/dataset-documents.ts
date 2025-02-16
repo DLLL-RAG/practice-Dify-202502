@@ -134,7 +134,7 @@ const translation = {
         language: 'भाषा',
         authorPublisher: 'लेखक/प्रकाशक',
         publishDate: 'प्रकाशन तिथि',
-        topicKeywords: 'विषय/कीवर्ड्स',
+        topicsKeywords: 'विषय/कीवर्ड्स',
         description: 'विवरण',
       },
       paper: {

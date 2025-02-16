@@ -132,7 +132,7 @@ const translation = {
         language: 'Ngôn ngữ',
         authorPublisher: 'Tác giả/Nhà xuất bản',
         publishDate: 'Ngày xuất bản',
-        topicKeywords: 'Chủ đề/Từ khóa',
+        topicsKeywords: 'Chủ đề/Từ khóa',
         description: 'Mô tả',
       },
       paper: {

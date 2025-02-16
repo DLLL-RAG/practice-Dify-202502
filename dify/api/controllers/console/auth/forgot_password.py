@@ -6,13 +6,7 @@ from flask_restful import Resource, reqparse  # type: ignore
 
 from constants.languages import languages
 from controllers.console import api
-from controllers.console.auth.error import (
-    EmailCodeError,
-    EmailPasswordResetLimitError,
-    InvalidEmailError,
-    InvalidTokenError,
-    PasswordMismatchError,
-)
+from controllers.console.auth.error import EmailCodeError, InvalidEmailError, InvalidTokenError, PasswordMismatchError
 from controllers.console.error import AccountInFreezeError, AccountNotFound, EmailSendIpLimitError
 from controllers.console.wraps import setup_required
 from events.tenant_event import tenant_was_created
@@ -68,10 +62,6 @@ class ForgotPasswordCheckApi(Resource):
 
         user_email = args["email"]
 
-        is_forgot_password_error_rate_limit = AccountService.is_forgot_password_error_rate_limit(args["email"])
-        if is_forgot_password_error_rate_limit:
-            raise EmailPasswordResetLimitError()
-
         token_data = AccountService.get_reset_password_data(args["token"])
         if token_data is None:
             raise InvalidTokenError()
@@ -80,10 +70,8 @@ class ForgotPasswordCheckApi(Resource):
             raise InvalidEmailError()
 
         if args["code"] != token_data.get("code"):
-            AccountService.add_forgot_password_error_rate_limit(args["email"])
             raise EmailCodeError()
 
-        AccountService.reset_forgot_password_error_rate_limit(args["email"])
         return {"is_valid": True, "email": token_data.get("email")}
 
 

@@ -133,7 +133,7 @@ const translation = {
         language: 'Langue',
         authorPublisher: 'Auteur/Éditeur',
         publishDate: 'Date de publication',
-        topicKeywords: 'Sujets/Mots-clés',
+        topicsKeywords: 'Sujets/Mots-clés',
         description: 'Description',
       },
       paper: {

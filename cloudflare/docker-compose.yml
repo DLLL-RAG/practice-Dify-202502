@@ -2,9 +2,6 @@ version: '3.5'
 services:
   cloudflare:
     image: pudding/docker-app:docker-cloudflare-tunnel-app-20250215.024625
-    # volumes:
-    #   - ./cloudflare.url.txt:/cloudflare_url.txt
-    # entrypoint: []
-    # command: ["bash", "/startup.sh"]
-    entrypoint: ["/cloudflared", "--url", "http://dify2openai:3000"]
+    # entrypoint: ["/cloudflared", "--url", "http://dify2openai:3000"]
+    entrypoint: ["/cloudflared", "--url", "http://nginx"]
     

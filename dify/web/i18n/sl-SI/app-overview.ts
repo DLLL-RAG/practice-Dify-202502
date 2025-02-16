@@ -112,7 +112,6 @@ const translation = {
           operation: 'Dokumentacija',
         },
       },
-      launch: 'Začetek',
     },
     apiInfo: {
       title: 'API storitev v ozadju',

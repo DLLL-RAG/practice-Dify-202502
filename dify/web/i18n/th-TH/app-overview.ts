@@ -112,7 +112,6 @@ const translation = {
           operation: 'เอกสาร',
         },
       },
-      launch: 'เรือยนต์',
     },
     apiInfo: {
       title: 'API บริการแบ็กเอนด์',

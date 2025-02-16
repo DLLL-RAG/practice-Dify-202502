@@ -87,7 +87,9 @@ Dify is an open-source LLM app development platform. Its intuitive interface com
 
 ## Feature Comparison
 <table style="width: 100%;">
-  <tr>
+  <tr
+
+>
     <th align="center">Feature</th>
     <th align="center">Dify.AI</th>
     <th align="center">LangChain</th>
