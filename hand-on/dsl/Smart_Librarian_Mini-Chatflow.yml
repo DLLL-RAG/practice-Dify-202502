@@ -3,7 +3,7 @@ app:
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: advanced-chat
-  name: test(copy)
+  name: Smart_Librarian_Mini-Chatflow
   use_icon_as_answer_icon: false
 kind: app
 version: 0.1.5
@@ -31,7 +31,7 @@ workflow:
       fileUploadConfig:
         audio_file_size_limit: 50
         batch_count_limit: 5
-        file_size_limit: 1500
+        file_size_limit: 15
         image_file_size_limit: 10
         video_file_size_limit: 100
         workflow_file_upload_limit: 10
@@ -154,7 +154,7 @@ workflow:
       width: 244
     - data:
         dataset_ids:
-        - 4a63121a-4c2b-42d3-87a0-d584986da3ee
+        - fc3109a1-241e-4add-b056-f08252d1f636
         multiple_retrieval_config:
           reranking_enable: false
           reranking_mode: weighted_score
@@ -287,7 +287,7 @@ workflow:
         query_variable_selector:
         - start
         - sys.query
-        selected: false
+        selected: true
         title: Question Classifier
         topics: []
         type: question-classifier
@@ -301,13 +301,13 @@ workflow:
       positionAbsolute:
         x: 334
         y: 288
-      selected: false
+      selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
     - data:
-        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"不在智慧館員的回答範圍內。\"\
+        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"愚人問題智者無法回答\"\
           ,\n    }\n"
         code_language: python3
         desc: ''
@@ -315,7 +315,7 @@ workflow:
           result:
             children: null
             type: string
-        selected: true
+        selected: false
         title: Code
         type: code
         variables: []
@@ -327,7 +327,7 @@ workflow:
       positionAbsolute:
         x: 942
         y: 310
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -357,6 +357,6 @@ workflow:
       type: custom
       width: 244
     viewport:
-      x: 0
-      y: 0
-      zoom: 0.7
+      x: -38.90000000000043
+      y: 56.34999999999991
+      zoom: 0.7000000000000002
