@@ -15,5 +15,6 @@ docker-compose \
   -f ./dify/docker/docker-compose.yaml \
   -f ./dify2openai/docker-compose.yml \
   -f ./cloudflare/docker-compose.yml \
-  #down -v
   down
+  #down -v
+  
