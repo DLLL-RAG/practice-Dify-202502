@@ -154,9 +154,9 @@ workflow:
       width: 244
     - data:
         dataset_ids:
-        - fc3109a1-241e-4add-b056-f08252d1f636
+        - 46e218fb-f700-4173-9590-ce411f0a0972
         multiple_retrieval_config:
-          reranking_enable: false
+          reranking_enable: true
           reranking_mode: weighted_score
           reranking_model:
             model: ''
@@ -287,7 +287,7 @@ workflow:
         query_variable_selector:
         - start
         - sys.query
-        selected: true
+        selected: false
         title: Question Classifier
         topics: []
         type: question-classifier
@@ -301,13 +301,13 @@ workflow:
       positionAbsolute:
         x: 334
         y: 288
-      selected: true
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
     - data:
-        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"愚人問題智者無法回答\"\
+        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"不在智慧館員的回答範圍內。\"\
           ,\n    }\n"
         code_language: python3
         desc: ''
@@ -315,7 +315,7 @@ workflow:
           result:
             children: null
             type: string
-        selected: false
+        selected: true
         title: Code
         type: code
         variables: []
@@ -327,7 +327,7 @@ workflow:
       positionAbsolute:
         x: 942
         y: 310
-      selected: false
+      selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
@@ -346,10 +346,10 @@ workflow:
       height: 130
       id: '1739724894124'
       position:
-        x: 1246
+        x: 1239.3906968286396
         y: 288
       positionAbsolute:
-        x: 1246
+        x: 1239.3906968286396
         y: 288
       selected: false
       sourcePosition: right
@@ -357,6 +357,6 @@ workflow:
       type: custom
       width: 244
     viewport:
-      x: -38.90000000000043
-      y: 56.34999999999991
-      zoom: 0.7000000000000002
+      x: -635.4079870965156
+      y: -106.96083230817408
+      zoom: 0.9763205664452845

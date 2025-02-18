@@ -16,7 +16,7 @@ workflow:
     selector:
     - env
     - site
-    value: blog.pulipuli.info
+    value: ndltd.ncl.edu.tw
     value_type: string
   features:
     file_upload:
@@ -36,7 +36,7 @@ workflow:
       fileUploadConfig:
         audio_file_size_limit: 50
         batch_count_limit: 5
-        file_size_limit: 1500
+        file_size_limit: 15
         image_file_size_limit: 10
         video_file_size_limit: 100
         workflow_file_upload_limit: 10
@@ -115,11 +115,11 @@ workflow:
       height: 54
       id: '1739726325386'
       position:
-        x: -169
-        y: 259
+        x: 30
+        y: 251.5
       positionAbsolute:
-        x: -169
-        y: 259
+        x: 30
+        y: 251.5
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -181,11 +181,11 @@ workflow:
       height: 98
       id: llm
       position:
-        x: 1280
-        y: 282
+        x: 942
+        y: 251.5
       positionAbsolute:
-        x: 1280
-        y: 282
+        x: 942
+        y: 251.5
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -201,11 +201,11 @@ workflow:
       height: 103
       id: answer
       position:
-        x: 1580
-        y: 282
+        x: 1246
+        y: 251.5
       positionAbsolute:
-        x: 1580
-        y: 282
+        x: 1246
+        y: 251.5
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -229,29 +229,30 @@ workflow:
       height: 54
       id: '1739726336591'
       position:
-        x: 322.79999999999995
-        y: 273
+        x: 334
+        y: 251.5
       positionAbsolute:
-        x: 322.79999999999995
-        y: 273
-      selected: true
+        x: 334
+        y: 251.5
+      selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
     - data:
         code: "\nfunction main({json}) {\n    json = json[0].organic_results\n   \
-          \ return {\n        result: json.map(item => {\n            let output =\
-          \ Object.keys(item).map(key => {\n                return `${key}: ${item[key]}`\n\
-          \            })\n            \n            return output.join('\\n')\n \
-          \       }).join('\\n\\n')\n    }\n}\n"
+          \ if (!json) {\n        json = []\n    }\n\n    return {\n        result:\
+          \ json.map(item => {\n            let output = Object.keys(item).map(key\
+          \ => {\n                return `${key}: ${item[key]}`\n            })\n\
+          \            \n            return output.join('\\n')\n        }).join('\\\
+          n\\n')\n    }\n}\n"
         code_language: javascript
         desc: ''
         outputs:
           result:
             children: null
             type: string
-        selected: false
+        selected: true
         title: Code
         type: code
         variables:
@@ -262,17 +263,17 @@ workflow:
       height: 54
       id: '1739726529201'
       position:
-        x: 980
-        y: 282
+        x: 638
+        y: 251.5
       positionAbsolute:
-        x: 980
-        y: 282
-      selected: false
+        x: 638
+        y: 251.5
+      selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
     viewport:
-      x: -1050
-      y: 118
-      zoom: 1
+      x: -145.60000000000002
+      y: -13.599999999999966
+      zoom: 0.7
