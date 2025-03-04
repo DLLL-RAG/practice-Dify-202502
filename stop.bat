@@ -18,7 +18,8 @@ docker-compose^
   --env-file .env^
   -f ./dify/docker/docker-compose.yaml^
   -f ./dify2openai/docker-compose.yml^
-  -f ./cloudflare/docker-compose.yml^
+  -f ./cloudflare-openai/docker-compose.yml^
+  -f ./cloudflare-dify/docker-compose.yml^
   down
 
 :: Uncomment the following line to include volume removal:

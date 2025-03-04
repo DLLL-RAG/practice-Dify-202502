@@ -3,7 +3,7 @@ app:
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: advanced-chat
-  name: 喵型語言模型
+  name: OpenAI-API-Chatflow
   use_icon_as_answer_icon: false
 kind: app
 version: 0.1.5
@@ -58,20 +58,20 @@ workflow:
     - data:
         isInIteration: false
         sourceType: start
-        targetType: code
-      id: 1739674472794-source-1739674481932-target
+        targetType: llm
+      id: 1739674472794-source-1741004970463-target
       source: '1739674472794'
       sourceHandle: source
-      target: '1739674481932'
+      target: '1741004970463'
       targetHandle: target
       type: custom
       zIndex: 0
     - data:
         isInIteration: false
-        sourceType: code
+        sourceType: llm
         targetType: answer
-      id: 1739674481932-source-answer-target
-      source: '1739674481932'
+      id: 1741004970463-source-answer-target
+      source: '1741004970463'
       sourceHandle: source
       target: answer
       targetHandle: target
@@ -87,62 +87,73 @@ workflow:
       height: 54
       id: '1739674472794'
       position:
-        x: 80
-        y: 282
+        x: 30
+        y: 251.5
       positionAbsolute:
-        x: 80
-        y: 282
+        x: 30
+        y: 251.5
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
     - data:
-        answer: '{{#1739674481932.result#}}'
+        answer: '{{#1741004970463.text#}}'
         desc: ''
-        selected: false
+        selected: true
         title: Answer
         type: answer
         variables: []
       height: 103
       id: answer
       position:
-        x: 680
-        y: 282
+        x: 638
+        y: 251.5
       positionAbsolute:
-        x: 680
-        y: 282
-      selected: false
-      sourcePosition: right
-      targetPosition: left
-      type: custom
-      width: 244
-    - data:
-        code: "\ndef main() -> dict:\n    return {\n        \"result\": \"喵\",\n \
-          \   }\n"
-        code_language: python3
-        desc: ''
-        outputs:
-          result:
-            children: null
-            type: string
-        selected: true
-        title: Code
-        type: code
-        variables: []
-      height: 54
-      id: '1739674481932'
-      position:
-        x: 384
-        y: 282
-      positionAbsolute:
-        x: 384
-        y: 282
+        x: 638
+        y: 251.5
       selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemma2:27b
+          provider: ollama
+        prompt_template:
+        - id: 0f20b6e9-a402-41d3-855f-0e59523052bb
+          role: system
+          text: ''
+        - id: d9c57491-c74a-4baa-bc8b-acc50a223fde
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1741004970463'
+      position:
+        x: 334
+        y: 251.5
+      positionAbsolute:
+        x: 334
+        y: 251.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
     viewport:
-      x: 151
-      y: 6
-      zoom: 1
+      x: -353
+      y: -56
+      zoom: 0.7

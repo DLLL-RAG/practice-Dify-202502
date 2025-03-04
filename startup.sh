@@ -18,7 +18,8 @@ docker-compose \
   --env-file .env \
   -f ./dify/docker/docker-compose.yaml \
   -f ./dify2openai/docker-compose.yml \
-  -f ./cloudflare/docker-compose.yml up --build
+  -f ./cloudflare-dify/docker-compose.yml \
+  -f ./cloudflare-openai/docker-compose.yml up --build
 
 # docker-compose --env-file ./default.env --env-file .env -f ./dify2openai/docker-compose.yml up --build
 
