@@ -44,4 +44,6 @@ https://github.com/langgenius/dify/releases
 
 4. 把此repo的舊版dify目錄整個刪掉，把新版dify目錄 (包含新版.env)移動到此，目錄名稱一樣是 dify
 
-5. 嘗試 `docker compose up --build` ，然後開啟 `http://localhost:18080` ，如果能夠順利開啟 Dify，就算完成。
+5. 嘗試 `docker compose up --build` ，然後開啟 `http://localhost:18080` ，必須要能順利開啟 Dify。否則觀察錯誤訊息來修正。
+
+6. 完成後git推上去。 `git commit -a -m "Update Dify" && git push`
