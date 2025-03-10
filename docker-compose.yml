@@ -3,4 +3,5 @@ include:
   - path:
     - dify/docker/docker-compose.yaml
     - dify2openai/docker-compose.yml
-    - cloudflare/docker-compose.yml
+    - cloudflare-dify/docker-compose.yml
+    - cloudflare-openai/docker-compose.yml

@@ -23,3 +23,25 @@
 ````
 你覺得圖書館員是不是過得太閒了？
 ````
+
+----
+
+## 如何更新Dify
+
+1. 到Dify的Repo找到最新的Release壓縮檔。
+
+https://github.com/langgenius/dify/releases
+
+只要zip壓縮檔就好，不要用 `git clone`，因為我們不是用Dify保存庫的架構。
+
+2. 解壓縮後，找到 ./docker/.env.example ，複製成 ./docker/.env ，此為新版 .env
+
+3. 跟此repo裡面的 ./dify/docker/.env (此為舊版.env) 比較，把有差異的地方更新到新版 .env
+
+- ./dify/docker/.env (舊版.env) 的檔案就是 https://github.com/pulipulichen/practice-Dify-202502/blob/main/dify/docker/.env
+- 有差異的地方需要同步記錄在 ./default.env ： https://github.com/pulipulichen/practice-Dify-202502/blob/main/default.env
+- 比較工具： https://github.com/pulipulichen/practice-Dify-202502/blob/main/default.env
+
+4. 把此repo的舊版dify目錄整個刪掉，把新版dify目錄 (包含新版.env)移動到此，目錄名稱一樣是 dify
+
+5. 嘗試 `docker compose up --build` ，然後開啟 `http://localhost:18080` ，如果能夠順利開啟 Dify，就算完成。
