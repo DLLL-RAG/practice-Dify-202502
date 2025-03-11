@@ -47,3 +47,15 @@ https://github.com/langgenius/dify/releases
 5. 嘗試 `docker compose up --build` ，然後開啟 `http://localhost:18080` ，必須要能順利開啟 Dify。否則觀察錯誤訊息來修正。
 
 6. 完成後git推上去。 `git commit -a -m "Update Dify" && git push`
+
+----
+
+## 如何更新dify-for-arm
+
+1. 複製 ./dify/docker/docker-compose.yml 到 ./dify-for-arm/docker/docker-compose.yml
+
+2. 把image的版本拿掉。例如「image: langgenius/dify-api:0.15.3」改成「image: langgenius/dify-api」
+
+3. 用ARM CPU的電腦跑跑看。
+
+4. 完成後git推上去。 `git commit -a -m "Update dify-for-arm" && git push`
